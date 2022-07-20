@@ -1,7 +1,9 @@
 import com.codeborne.selenide.CollectionCondition;
 import com.codeborne.selenide.Condition;
 import io.appium.java_client.AppiumBy;
+import io.qameta.allure.AllureId;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Selenide.*;
@@ -10,6 +12,8 @@ import static io.qameta.allure.Allure.step;
 public class MobileTests extends TestBase {
 
     @Test
+    @AllureId("11311")
+    @Tag("searchTest")
     @DisplayName("Проверка поиска")
     void searchTest() {
         back();
@@ -23,6 +27,8 @@ public class MobileTests extends TestBase {
     }
 
     @Test
+    @AllureId("11319")
+    @Tag("onboardingTest")
     @DisplayName("Проверка страниц онбоардинга")
     void gettingStartedTest() {
         step("First page", () -> {
@@ -50,6 +56,8 @@ public class MobileTests extends TestBase {
     }
 
     @Test
+    @AllureId("11320")
+    @Tag("announcement")
     @DisplayName("Проверка текста объявления")
     void checkAnnouncementText() {
         back();
@@ -61,6 +69,8 @@ public class MobileTests extends TestBase {
     }
 
     @Test
+    @AllureId("11321")
+    @Tag("clear")
     @DisplayName("Проверка очистки поля поиска")
     void checkEmptySearch() {
         back();
