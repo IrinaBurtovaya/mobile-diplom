@@ -10,7 +10,6 @@ import org.junit.jupiter.api.BeforeEach;
 
 import java.util.Objects;
 
-import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.logevents.SelenideLogger.addListener;
 import static helpers.Attach.sessionId;
 import static io.qameta.allure.Allure.step;
@@ -31,7 +30,6 @@ public class TestBase {
     @BeforeEach
     public void startDriver() {
         addListener("AllureSelenide", new AllureSelenide());
-        open();
     }
 
     @AfterEach
